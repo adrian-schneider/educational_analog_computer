@@ -1,0 +1,234 @@
+[Version]
+Product,2
+File,18
+{
+"Config" : {
+  "NetImportFormat" : "Protel"
+},
+"Board" : {
+  "Width" : 62,
+  "Height" : 39,
+  "Pattern" : "Strip"
+},
+"CelledOutlines" : [
+  { "Name" : "Rel_TQ2", "Locked" : true,
+    "Rows" : [
+    [{"Pin" : "LP"},{"Pin" : "NC1"},{"Pin" : "C1"},{"Pin" : "NO1"},{"Pin" : "5"}],
+    ["Free","Body","Body","Body","Body"],
+    ["Free","Body","Body","Body","Body"],
+    [{"Pin" : "LN"},{"Pin" : "NC2"},{"Pin" : "C2"},{"Pin" : "NO2"},{"Pin" : "6"}]
+    ]
+  },
+  { "Name" : "Rel_TQ2_L2", "Locked" : true,
+    "Rows" : [
+    [{"Pin" : "LRP"},{"Pin" : "NC1"},{"Pin" : "C1"},{"Pin" : "NO1"},{"Pin" : "LRN"}],
+    ["Free","Body","Body","Body","Body"],
+    ["Free","Body","Body","Body","Body"],
+    [{"Pin" : "LSP"},{"Pin" : "NC2"},{"Pin" : "C2"},{"Pin" : "NO2"},{"Pin" : "LSN"}]
+    ]
+  }
+],
+"LeadedOutlines" : [
+],
+"RadialOutlines" : [
+],
+"CustomOutlines" : [
+],
+"SmdOutlines" : [
+],
+"Components" : [
+  { "Designator" : "Rel_TQ2", "Value" : "", "Outline" : "Rel_TQ2",
+  "X1000" : 6000, "Y1000" : 0, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : -3, "Y" : 0, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "Rel_TQ2_L2", "Value" : "", "Outline" : "Rel_TQ2_L2",
+  "X1000" : 6000, "Y1000" : 5000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : -3, "Y" : 0, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  }
+],
+"Links" : [
+],
+"Breaks" : [
+],
+"Wires" : [
+],
+"Nets" : [
+    { "Node" : "GND", "Components" : [
+    { "Name" : "J1", "Pins" : ["1"] },
+    { "Name" : "Q101", "Pins" : ["3"] },
+    { "Name" : "Q102", "Pins" : ["3"] },
+    { "Name" : "Q201", "Pins" : ["3"] },
+    { "Name" : "Q301", "Pins" : ["3"] },
+    { "Name" : "Q302", "Pins" : ["3"] },
+    { "Name" : "Q401", "Pins" : ["3"] },
+    { "Name" : "R102", "Pins" : ["2"] },
+    { "Name" : "R104", "Pins" : ["2"] },
+    { "Name" : "R202", "Pins" : ["2"] },
+    { "Name" : "R302", "Pins" : ["2"] },
+    { "Name" : "R304", "Pins" : ["2"] },
+    { "Name" : "R402", "Pins" : ["2"] }
+    ] },
+    { "Node" : "holdsw_00000", "Components" : [
+    { "Name" : "J1", "Pins" : ["3"] },
+    { "Name" : "R103", "Pins" : ["1"] },
+    { "Name" : "R303", "Pins" : ["1"] }
+    ] },
+    { "Node" : "holdsw_00001", "Components" : [
+    { "Name" : "D102", "Pins" : ["2"] },
+    { "Name" : "Q102", "Pins" : ["1"] },
+    { "Name" : "S100", "Pins" : ["LSN"] }
+    ] },
+    { "Node" : "holdsw_00002", "Components" : [
+    { "Name" : "Q102", "Pins" : ["2"] },
+    { "Name" : "R103", "Pins" : ["2"] },
+    { "Name" : "R104", "Pins" : ["1"] }
+    ] },
+    { "Node" : "holdsw_00003", "Components" : [
+    { "Name" : "D302", "Pins" : ["2"] },
+    { "Name" : "Q302", "Pins" : ["1"] },
+    { "Name" : "S300", "Pins" : ["LSN"] }
+    ] },
+    { "Node" : "holdsw_00004", "Components" : [
+    { "Name" : "Q302", "Pins" : ["2"] },
+    { "Name" : "R303", "Pins" : ["2"] },
+    { "Name" : "R304", "Pins" : ["1"] }
+    ] },
+    { "Node" : "ldicsw_00000", "Components" : [
+    { "Name" : "J1", "Pins" : ["5"] },
+    { "Name" : "R201", "Pins" : ["1"] },
+    { "Name" : "R401", "Pins" : ["1"] }
+    ] },
+    { "Node" : "ldicsw_00001", "Components" : [
+    { "Name" : "D201", "Pins" : ["2"] },
+    { "Name" : "Q201", "Pins" : ["1"] },
+    { "Name" : "S200", "Pins" : ["LN"] }
+    ] },
+    { "Node" : "ldicsw_00002", "Components" : [
+    { "Name" : "Q201", "Pins" : ["2"] },
+    { "Name" : "R201", "Pins" : ["2"] },
+    { "Name" : "R202", "Pins" : ["1"] }
+    ] },
+    { "Node" : "ldicsw_00003", "Components" : [
+    { "Name" : "D401", "Pins" : ["2"] },
+    { "Name" : "Q401", "Pins" : ["1"] },
+    { "Name" : "S400", "Pins" : ["LN"] }
+    ] },
+    { "Node" : "ldicsw_00004", "Components" : [
+    { "Name" : "Q401", "Pins" : ["2"] },
+    { "Name" : "R401", "Pins" : ["2"] },
+    { "Name" : "R402", "Pins" : ["1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00000", "Components" : [
+    { "Name" : "J2", "Pins" : ["1"] },
+    { "Name" : "S100", "Pins" : ["NC1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00001", "Components" : [
+    { "Name" : "J2", "Pins" : ["2"] },
+    { "Name" : "S100", "Pins" : ["NC2"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00002", "Components" : [
+    { "Name" : "J2", "Pins" : ["3"] },
+    { "Name" : "S300", "Pins" : ["NC1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00003", "Components" : [
+    { "Name" : "J2", "Pins" : ["4"] },
+    { "Name" : "S300", "Pins" : ["NC2"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00004", "Components" : [
+    { "Name" : "J3", "Pins" : ["1"] },
+    { "Name" : "S200", "Pins" : ["NO1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00005", "Components" : [
+    { "Name" : "J3", "Pins" : ["2"] },
+    { "Name" : "S200", "Pins" : ["NO2"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00006", "Components" : [
+    { "Name" : "J3", "Pins" : ["3"] },
+    { "Name" : "S400", "Pins" : ["NO1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00007", "Components" : [
+    { "Name" : "J3", "Pins" : ["4"] },
+    { "Name" : "S400", "Pins" : ["NO2"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00008", "Components" : [
+    { "Name" : "J4", "Pins" : ["1"] },
+    { "Name" : "S200", "Pins" : ["C1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00009", "Components" : [
+    { "Name" : "J4", "Pins" : ["2"] },
+    { "Name" : "S200", "Pins" : ["C2"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00010", "Components" : [
+    { "Name" : "J4", "Pins" : ["3"] },
+    { "Name" : "S400", "Pins" : ["C1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00011", "Components" : [
+    { "Name" : "J4", "Pins" : ["4"] },
+    { "Name" : "S400", "Pins" : ["C2"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00012", "Components" : [
+    { "Name" : "S100", "Pins" : ["C1"] },
+    { "Name" : "S200", "Pins" : ["NC1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00013", "Components" : [
+    { "Name" : "S100", "Pins" : ["C2"] },
+    { "Name" : "S200", "Pins" : ["NC2"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00014", "Components" : [
+    { "Name" : "S300", "Pins" : ["C1"] },
+    { "Name" : "S400", "Pins" : ["NC1"] }
+    ] },
+    { "Node" : "run_hld_ldicsw_00015", "Components" : [
+    { "Name" : "S300", "Pins" : ["C2"] },
+    { "Name" : "S400", "Pins" : ["NC2"] }
+    ] },
+    { "Node" : "runsw_00000", "Components" : [
+    { "Name" : "J1", "Pins" : ["4"] },
+    { "Name" : "R101", "Pins" : ["1"] },
+    { "Name" : "R301", "Pins" : ["1"] }
+    ] },
+    { "Node" : "runsw_00001", "Components" : [
+    { "Name" : "D101", "Pins" : ["2"] },
+    { "Name" : "Q101", "Pins" : ["1"] },
+    { "Name" : "S100", "Pins" : ["LRN"] }
+    ] },
+    { "Node" : "runsw_00002", "Components" : [
+    { "Name" : "Q101", "Pins" : ["2"] },
+    { "Name" : "R101", "Pins" : ["2"] },
+    { "Name" : "R102", "Pins" : ["1"] }
+    ] },
+    { "Node" : "runsw_00003", "Components" : [
+    { "Name" : "D301", "Pins" : ["2"] },
+    { "Name" : "Q301", "Pins" : ["1"] },
+    { "Name" : "S300", "Pins" : ["LRN"] }
+    ] },
+    { "Node" : "runsw_00004", "Components" : [
+    { "Name" : "Q301", "Pins" : ["2"] },
+    { "Name" : "R301", "Pins" : ["2"] },
+    { "Name" : "R302", "Pins" : ["1"] }
+    ] },
+    { "Node" : "V+", "Components" : [
+    { "Name" : "D101", "Pins" : ["1"] },
+    { "Name" : "D102", "Pins" : ["1"] },
+    { "Name" : "D201", "Pins" : ["1"] },
+    { "Name" : "D301", "Pins" : ["1"] },
+    { "Name" : "D302", "Pins" : ["1"] },
+    { "Name" : "D401", "Pins" : ["1"] },
+    { "Name" : "J1", "Pins" : ["2"] },
+    { "Name" : "S100", "Pins" : ["LRP", "LSP"] },
+    { "Name" : "S200", "Pins" : ["LP"] },
+    { "Name" : "S300", "Pins" : ["LRP", "LSP"] },
+    { "Name" : "S400", "Pins" : ["LP"] }
+    ] }
+],
+"NetColors" : [
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" }
+]
+}

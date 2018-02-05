@@ -1,0 +1,596 @@
+[Version]
+Product,2
+File,18
+{
+"Config" : {
+  "NetImportFormat" : "Protel"
+},
+"Board" : {
+  "Width" : 61,
+  "Height" : 38,
+  "Pattern" : "Strip"
+},
+"CelledOutlines" : [
+  { "Name" : "DIP8", "Locked" : false,
+    "Rows" : [
+    [{"Pin" : "1"},"Free","Free",{"Pin" : "8"}],
+    [{"Pin" : "2"},"Body","Body",{"Pin" : "7"}],
+    [{"Pin" : "3"},"Body","Body",{"Pin" : "6"}],
+    [{"Pin" : "4"},"Body","Body",{"Pin" : "5"}]
+    ]
+  },
+  { "Name" : "SIP6", "Locked" : false,
+    "Rows" : [
+    [{"Pin" : "1"}],
+    [{"Pin" : "2"}],
+    [{"Pin" : "3"}],
+    [{"Pin" : "4"}],
+    [{"Pin" : "5"}],
+    [{"Pin" : "6"}]
+    ]
+  },
+  { "Name" : "SIP5", "Locked" : false,
+    "Rows" : [
+    [{"Pin" : "1"}],
+    [{"Pin" : "2"}],
+    [{"Pin" : "3"}],
+    [{"Pin" : "4"}],
+    [{"Pin" : "5"}]
+    ]
+  },
+  { "Name" : "SIP1", "Locked" : false,
+    "Rows" : [
+    [{"Pin" : "1"}]
+    ]
+  }
+],
+"LeadedOutlines" : [
+  { "Name" : "AX2_1N", "Locked" : false,
+    "BodyLength" : 2, "BodyWidth" : 1,
+    "Pin0Name" : "1", "Pin1Name" : "2", "ShowReference" : false
+  },
+  { "Name" : "AX7_3N", "Locked" : false,
+    "BodyLength" : 7, "BodyWidth" : 3,
+    "Pin0Name" : "1", "Pin1Name" : "2", "ShowReference" : false
+  },
+  { "Name" : "AX3_2N", "Locked" : false,
+    "BodyLength" : 3, "BodyWidth" : 2,
+    "Pin0Name" : "1", "Pin1Name" : "2", "ShowReference" : false
+  }
+],
+"RadialOutlines" : [
+],
+"CustomOutlines" : [
+  { "Name" : "BOX2_2", "Locked" : false,
+    "Pins" : [
+    { "Name" : "1", "X5" : 7, "Y5" : 7 },
+    { "Name" : "2", "X5" : 7, "Y5" : 17 }
+    ],
+    "Lines" : [
+    { "X5" : 2, "Y5" : 4, "DX5" : 10, "DY5" : 0},
+    { "X5" : 12, "Y5" : 4, "DX5" : 0, "DY5" : 16},
+    { "X5" : 12, "Y5" : 20, "DX5" : -10, "DY5" : 0},
+    { "X5" : 2, "Y5" : 20, "DX5" : 0, "DY5" : -16}
+    ]
+  },
+  { "Name" : "TRIM6", "Locked" : false,
+    "Pins" : [
+    { "Name" : "1", "X5" : 7, "Y5" : 7 },
+    { "Name" : "3", "X5" : 7, "Y5" : 17 },
+    { "Name" : "2", "X5" : 12, "Y5" : 12 }
+    ],
+    "Lines" : [
+    { "X5" : 3, "Y5" : 3, "DX5" : 13, "DY5" : 0},
+    { "X5" : 3, "Y5" : 3, "DX5" : 0, "DY5" : 18},
+    { "X5" : 16, "Y5" : 21, "DX5" : -13, "DY5" : 0},
+    { "X5" : 16, "Y5" : 21, "DX5" : 0, "DY5" : -18}
+    ]
+  }
+],
+"SmdOutlines" : [
+],
+"Components" : [
+  { "Designator" : "R103", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 7000, "Y1000" : 5000, "EndDeltaX" : 0, "EndDeltaY" : 6,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R103A", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 8000, "Y1000" : 6000, "EndDeltaX" : 0, "EndDeltaY" : 5,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R103B", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 9000, "Y1000" : 7000, "EndDeltaX" : 0, "EndDeltaY" : 4,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "C103", "Value" : "100n", "Outline" : "AX3_2N",
+  "X1000" : 20000, "Y1000" : 5000, "EndDeltaX" : 0, "EndDeltaY" : 5,
+  "Text" : { "X" : 0, "Y" : 8, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "C104", "Value" : "100n", "Outline" : "AX3_2N",
+  "X1000" : 14000, "Y1000" : 7000, "EndDeltaX" : 0, "EndDeltaY" : 3,
+  "Text" : { "X" : 0, "Y" : 6, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "P101", "Value" : "50k", "Outline" : "TRIM6",
+  "X1000" : 13000, "Y1000" : 3000, "EndDeltaX" : 1, "EndDeltaY" : 0,
+  "Text" : { "X" : 2, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "IC101", "Value" : "LF355", "Outline" : "DIP8",
+  "X1000" : 15000, "Y1000" : 4000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 2, "Y" : 4, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J101", "Value" : "J101", "Outline" : "SIP5",
+  "X1000" : 1000, "Y1000" : 3000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 0, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J500", "Value" : "J500", "Outline" : "SIP6",
+  "X1000" : 59000, "Y1000" : 14000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : -1, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J501", "Value" : "J501", "Outline" : "SIP6",
+  "X1000" : 60000, "Y1000" : 14000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : -1, "Y" : -2, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R203", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 21000, "Y1000" : 29000, "EndDeltaX" : 0, "EndDeltaY" : -6,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R203A", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 20000, "Y1000" : 28000, "EndDeltaX" : 0, "EndDeltaY" : -5,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R203B", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 19000, "Y1000" : 27000, "EndDeltaX" : 0, "EndDeltaY" : -4,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "C203", "Value" : "100n", "Outline" : "AX3_2N",
+  "X1000" : 8000, "Y1000" : 29000, "EndDeltaX" : 0, "EndDeltaY" : -5,
+  "Text" : { "X" : 0, "Y" : -3, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "C204", "Value" : "100n", "Outline" : "AX3_2N",
+  "X1000" : 14000, "Y1000" : 27000, "EndDeltaX" : 0, "EndDeltaY" : -3,
+  "Text" : { "X" : 0, "Y" : 4, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "P201", "Value" : "50k", "Outline" : "TRIM6",
+  "X1000" : 15000, "Y1000" : 31000, "EndDeltaX" : -1, "EndDeltaY" : 0,
+  "Text" : { "X" : 2, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "IC201", "Value" : "LF355", "Outline" : "DIP8",
+  "X1000" : 13000, "Y1000" : 30000, "EndDeltaX" : 0, "EndDeltaY" : -1,
+  "Text" : { "X" : 1, "Y" : 4, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J201", "Value" : "J201", "Outline" : "SIP5",
+  "X1000" : 27000, "Y1000" : 31000, "EndDeltaX" : 0, "EndDeltaY" : -1,
+  "Text" : { "X" : 0, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R303", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 50000, "Y1000" : 29000, "EndDeltaX" : 0, "EndDeltaY" : -6,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R303A", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 49000, "Y1000" : 28000, "EndDeltaX" : 0, "EndDeltaY" : -5,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R303B", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 48000, "Y1000" : 27000, "EndDeltaX" : 0, "EndDeltaY" : -4,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "C303", "Value" : "100n", "Outline" : "AX3_2N",
+  "X1000" : 37000, "Y1000" : 29000, "EndDeltaX" : 0, "EndDeltaY" : -5,
+  "Text" : { "X" : 0, "Y" : -3, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "C304", "Value" : "100n", "Outline" : "AX3_2N",
+  "X1000" : 43000, "Y1000" : 27000, "EndDeltaX" : 0, "EndDeltaY" : -3,
+  "Text" : { "X" : 0, "Y" : 4, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "P301", "Value" : "50k", "Outline" : "TRIM6",
+  "X1000" : 44000, "Y1000" : 31000, "EndDeltaX" : -1, "EndDeltaY" : 0,
+  "Text" : { "X" : 2, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "IC301", "Value" : "LF355", "Outline" : "DIP8",
+  "X1000" : 42000, "Y1000" : 30000, "EndDeltaX" : 0, "EndDeltaY" : -1,
+  "Text" : { "X" : 1, "Y" : 4, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J301", "Value" : "J301", "Outline" : "SIP5",
+  "X1000" : 56000, "Y1000" : 31000, "EndDeltaX" : 0, "EndDeltaY" : -1,
+  "Text" : { "X" : 0, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R403", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 36000, "Y1000" : 5000, "EndDeltaX" : 0, "EndDeltaY" : 6,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R403A", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 37000, "Y1000" : 6000, "EndDeltaX" : 0, "EndDeltaY" : 5,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R403B", "Value" : "100k", "Outline" : "AX2_1N",
+  "X1000" : 38000, "Y1000" : 7000, "EndDeltaX" : 0, "EndDeltaY" : 4,
+  "Text" : { "X" : 0, "Y" : 7, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "C403", "Value" : "100n", "Outline" : "AX3_2N",
+  "X1000" : 49000, "Y1000" : 5000, "EndDeltaX" : 0, "EndDeltaY" : 5,
+  "Text" : { "X" : 0, "Y" : 8, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "C404", "Value" : "100n", "Outline" : "AX3_2N",
+  "X1000" : 43000, "Y1000" : 7000, "EndDeltaX" : 0, "EndDeltaY" : 3,
+  "Text" : { "X" : 0, "Y" : 6, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "P401", "Value" : "50k", "Outline" : "TRIM6",
+  "X1000" : 42000, "Y1000" : 3000, "EndDeltaX" : 1, "EndDeltaY" : 0,
+  "Text" : { "X" : 2, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "IC401", "Value" : "LF355", "Outline" : "DIP8",
+  "X1000" : 44000, "Y1000" : 4000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 2, "Y" : 4, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J401", "Value" : "J401", "Outline" : "SIP5",
+  "X1000" : 30000, "Y1000" : 3000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 0, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J102", "Value" : "J102", "Outline" : "SIP1",
+  "X1000" : 23000, "Y1000" : 6000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 0, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J202", "Value" : "J202", "Outline" : "SIP1",
+  "X1000" : 5000, "Y1000" : 28000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 0, "Y" : 1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J302", "Value" : "J302", "Outline" : "SIP1",
+  "X1000" : 34000, "Y1000" : 28000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 0, "Y" : 1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "J402", "Value" : "J402", "Outline" : "SIP1",
+  "X1000" : 52000, "Y1000" : 6000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 0, "Y" : -1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  }
+],
+"Links" : [
+  { "X" : 13, "Y" : 6, "EndDeltaX" : 0, "EndDeltaY" : 4, "Group" : 0 },
+  { "X" : 13, "Y" : 2, "EndDeltaX" : 0, "EndDeltaY" : 2, "Group" : 0 },
+  { "X" : 16, "Y" : 10, "EndDeltaX" : 0, "EndDeltaY" : 6, "Group" : 0 },
+  { "X" : 21, "Y" : 5, "EndDeltaX" : 0, "EndDeltaY" : 9, "Group" : 0 },
+  { "X" : 0, "Y" : 14, "EndDeltaX" : 0, "EndDeltaY" : 1, "Group" : 0 },
+  { "X" : 0, "Y" : 16, "EndDeltaX" : 0, "EndDeltaY" : 1, "Group" : 0 },
+  { "X" : 0, "Y" : 18, "EndDeltaX" : 0, "EndDeltaY" : 1, "Group" : 0 },
+  { "X" : 12, "Y" : 7, "EndDeltaX" : 0, "EndDeltaY" : 11, "Group" : 0 },
+  { "X" : 19, "Y" : 1, "EndDeltaX" : 0, "EndDeltaY" : 4, "Group" : 0 },
+  { "X" : 17, "Y" : 2, "EndDeltaX" : 0, "EndDeltaY" : 5, "Group" : 0 },
+  { "X" : 58, "Y" : 14, "EndDeltaX" : 0, "EndDeltaY" : 1, "Group" : 0 },
+  { "X" : 58, "Y" : 16, "EndDeltaX" : 0, "EndDeltaY" : 1, "Group" : 0 },
+  { "X" : 58, "Y" : 18, "EndDeltaX" : 0, "EndDeltaY" : 1, "Group" : 0 },
+  { "X" : 15, "Y" : 30, "EndDeltaX" : 0, "EndDeltaY" : 2, "Group" : 0 },
+  { "X" : 11, "Y" : 27, "EndDeltaX" : 0, "EndDeltaY" : 5, "Group" : 0 },
+  { "X" : 9, "Y" : 29, "EndDeltaX" : 0, "EndDeltaY" : 4, "Group" : 0 },
+  { "X" : 16, "Y" : 18, "EndDeltaX" : 0, "EndDeltaY" : 9, "Group" : 0 },
+  { "X" : 13, "Y" : 16, "EndDeltaX" : 0, "EndDeltaY" : 8, "Group" : 0 },
+  { "X" : 15, "Y" : 24, "EndDeltaX" : 0, "EndDeltaY" : 4, "Group" : 0 },
+  { "X" : 7, "Y" : 14, "EndDeltaX" : 0, "EndDeltaY" : 15, "Group" : 0 },
+  { "X" : 40, "Y" : 27, "EndDeltaX" : 0, "EndDeltaY" : 5, "Group" : 0 },
+  { "X" : 44, "Y" : 30, "EndDeltaX" : 0, "EndDeltaY" : 2, "Group" : 0 },
+  { "X" : 44, "Y" : 24, "EndDeltaX" : 0, "EndDeltaY" : 4, "Group" : 0 },
+  { "X" : 36, "Y" : 14, "EndDeltaX" : 0, "EndDeltaY" : 15, "Group" : 0 },
+  { "X" : 38, "Y" : 29, "EndDeltaX" : 0, "EndDeltaY" : 4, "Group" : 0 },
+  { "X" : 42, "Y" : 16, "EndDeltaX" : 0, "EndDeltaY" : 8, "Group" : 0 },
+  { "X" : 45, "Y" : 18, "EndDeltaX" : 0, "EndDeltaY" : 9, "Group" : 0 },
+  { "X" : 42, "Y" : 2, "EndDeltaX" : 0, "EndDeltaY" : 2, "Group" : 0 },
+  { "X" : 46, "Y" : 2, "EndDeltaX" : 0, "EndDeltaY" : 5, "Group" : 0 },
+  { "X" : 48, "Y" : 1, "EndDeltaX" : 0, "EndDeltaY" : 4, "Group" : 0 },
+  { "X" : 42, "Y" : 6, "EndDeltaX" : 0, "EndDeltaY" : 4, "Group" : 0 },
+  { "X" : 50, "Y" : 5, "EndDeltaX" : 0, "EndDeltaY" : 9, "Group" : 0 },
+  { "X" : 41, "Y" : 7, "EndDeltaX" : 0, "EndDeltaY" : 11, "Group" : 0 },
+  { "X" : 45, "Y" : 10, "EndDeltaX" : 0, "EndDeltaY" : 6, "Group" : 0 },
+  { "X" : 11, "Y" : 5, "EndDeltaX" : 0, "EndDeltaY" : 6, "Group" : 0 },
+  { "X" : 40, "Y" : 5, "EndDeltaX" : 0, "EndDeltaY" : 6, "Group" : 0 },
+  { "X" : 17, "Y" : 23, "EndDeltaX" : 0, "EndDeltaY" : 6, "Group" : 0 },
+  { "X" : 46, "Y" : 23, "EndDeltaX" : 0, "EndDeltaY" : 6, "Group" : 0 }
+],
+"Breaks" : [
+  { "X" : 16, "Y" : 4, "Shift" : "none", "Group" : 0 },
+  { "X" : 16, "Y" : 5, "Shift" : "none", "Group" : 0 },
+  { "X" : 16, "Y" : 6, "Shift" : "none", "Group" : 0 },
+  { "X" : 16, "Y" : 7, "Shift" : "none", "Group" : 0 },
+  { "X" : 10, "Y" : 3, "Shift" : "none", "Group" : 0 },
+  { "X" : 10, "Y" : 4, "Shift" : "none", "Group" : 0 },
+  { "X" : 10, "Y" : 5, "Shift" : "none", "Group" : 0 },
+  { "X" : 10, "Y" : 6, "Shift" : "none", "Group" : 0 },
+  { "X" : 10, "Y" : 7, "Shift" : "none", "Group" : 0 },
+  { "X" : 15, "Y" : 2, "Shift" : "none", "Group" : 0 },
+  { "X" : 12, "Y" : 27, "Shift" : "none", "Group" : 0 },
+  { "X" : 12, "Y" : 28, "Shift" : "none", "Group" : 0 },
+  { "X" : 12, "Y" : 29, "Shift" : "none", "Group" : 0 },
+  { "X" : 12, "Y" : 30, "Shift" : "none", "Group" : 0 },
+  { "X" : 13, "Y" : 32, "Shift" : "none", "Group" : 0 },
+  { "X" : 18, "Y" : 27, "Shift" : "none", "Group" : 0 },
+  { "X" : 18, "Y" : 28, "Shift" : "none", "Group" : 0 },
+  { "X" : 18, "Y" : 29, "Shift" : "none", "Group" : 0 },
+  { "X" : 18, "Y" : 30, "Shift" : "none", "Group" : 0 },
+  { "X" : 18, "Y" : 31, "Shift" : "none", "Group" : 0 },
+  { "X" : 41, "Y" : 27, "Shift" : "none", "Group" : 0 },
+  { "X" : 41, "Y" : 28, "Shift" : "none", "Group" : 0 },
+  { "X" : 41, "Y" : 29, "Shift" : "none", "Group" : 0 },
+  { "X" : 41, "Y" : 30, "Shift" : "none", "Group" : 0 },
+  { "X" : 42, "Y" : 32, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 21, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 22, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 23, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 24, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 25, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 26, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 27, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 28, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 29, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 30, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 31, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 32, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 33, "Shift" : "none", "Group" : 0 },
+  { "X" : 47, "Y" : 27, "Shift" : "none", "Group" : 0 },
+  { "X" : 47, "Y" : 28, "Shift" : "none", "Group" : 0 },
+  { "X" : 47, "Y" : 29, "Shift" : "none", "Group" : 0 },
+  { "X" : 47, "Y" : 30, "Shift" : "none", "Group" : 0 },
+  { "X" : 47, "Y" : 31, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 1, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 2, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 3, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 4, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 5, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 6, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 7, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 8, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 9, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 10, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 11, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 12, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 13, "Shift" : "none", "Group" : 0 },
+  { "X" : 45, "Y" : 4, "Shift" : "none", "Group" : 0 },
+  { "X" : 45, "Y" : 5, "Shift" : "none", "Group" : 0 },
+  { "X" : 45, "Y" : 6, "Shift" : "none", "Group" : 0 },
+  { "X" : 45, "Y" : 7, "Shift" : "none", "Group" : 0 },
+  { "X" : 44, "Y" : 2, "Shift" : "none", "Group" : 0 },
+  { "X" : 39, "Y" : 3, "Shift" : "none", "Group" : 0 },
+  { "X" : 39, "Y" : 4, "Shift" : "none", "Group" : 0 },
+  { "X" : 39, "Y" : 5, "Shift" : "none", "Group" : 0 },
+  { "X" : 39, "Y" : 6, "Shift" : "none", "Group" : 0 },
+  { "X" : 39, "Y" : 7, "Shift" : "none", "Group" : 0 }
+],
+"Wires" : [
+    { "Value" : "AI1_SP", "X" : 4, "Y" : 11, "Group" : 0 },
+    { "Value" : "AI1_1_1", "X" : 4, "Y" : 5, "Group" : 0 },
+    { "Value" : "AI1_1_2", "X" : 4, "Y" : 6, "Group" : 0 },
+    { "Value" : "AI1_1_3", "X" : 4, "Y" : 7, "Group" : 0 },
+    { "Value" : "AI1", "X" : 22, "Y" : 6, "Group" : 0 },
+    { "Value" : "AI2_1_1", "X" : 24, "Y" : 29, "Group" : 0 },
+    { "Value" : "AI2_1_2", "X" : 24, "Y" : 28, "Group" : 0 },
+    { "Value" : "AI2_1_3", "X" : 24, "Y" : 27, "Group" : 0 },
+    { "Value" : "AI2_SP", "X" : 24, "Y" : 23, "Group" : 0 },
+    { "Value" : "AI2", "X" : 6, "Y" : 28, "Group" : 0 },
+    { "Value" : "AI3", "X" : 35, "Y" : 28, "Group" : 0 },
+    { "Value" : "AI3_SP", "X" : 53, "Y" : 23, "Group" : 0 },
+    { "Value" : "AI3_1_1", "X" : 53, "Y" : 29, "Group" : 0 },
+    { "Value" : "AI3_1_2", "X" : 53, "Y" : 28, "Group" : 0 },
+    { "Value" : "AI3_1_3", "X" : 53, "Y" : 27, "Group" : 0 },
+    { "Value" : "V-", "X" : 57, "Y" : 19, "Group" : 0 },
+    { "Value" : "V-", "X" : 57, "Y" : 18, "Group" : 0 },
+    { "Value" : "GND", "X" : 57, "Y" : 17, "Group" : 0 },
+    { "Value" : "GND", "X" : 57, "Y" : 16, "Group" : 0 },
+    { "Value" : "V+", "X" : 57, "Y" : 15, "Group" : 0 },
+    { "Value" : "V+", "X" : 57, "Y" : 14, "Group" : 0 },
+    { "Value" : "AI4_1_1", "X" : 33, "Y" : 5, "Group" : 0 },
+    { "Value" : "AI4_1_2", "X" : 33, "Y" : 6, "Group" : 0 },
+    { "Value" : "AI4_1_3", "X" : 33, "Y" : 7, "Group" : 0 },
+    { "Value" : "AI4_SP", "X" : 33, "Y" : 11, "Group" : 0 },
+    { "Value" : "AI4", "X" : 51, "Y" : 6, "Group" : 0 }
+],
+"Text" : [
+],
+"Nets" : [
+    { "Node" : "GND", "Components" : [
+    { "Name" : "C103", "Pins" : ["2"] },
+    { "Name" : "C104", "Pins" : ["2"] },
+    { "Name" : "C203", "Pins" : ["2"] },
+    { "Name" : "C204", "Pins" : ["2"] },
+    { "Name" : "C303", "Pins" : ["2"] },
+    { "Name" : "C304", "Pins" : ["2"] },
+    { "Name" : "C403", "Pins" : ["2"] },
+    { "Name" : "C404", "Pins" : ["2"] },
+    { "Name" : "IC101", "Pins" : ["3"] },
+    { "Name" : "IC201", "Pins" : ["3"] },
+    { "Name" : "IC301", "Pins" : ["3"] },
+    { "Name" : "IC401", "Pins" : ["3"] },
+    { "Name" : "J500", "Pins" : ["3", "4"] },
+    { "Name" : "J501", "Pins" : ["3", "4"] }
+    ] },
+    { "Node" : "I1_1_1", "Components" : [
+    { "Name" : "J101", "Pins" : ["3"] },
+    { "Name" : "R103", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I1_1_2", "Components" : [
+    { "Name" : "J101", "Pins" : ["4"] },
+    { "Name" : "R103A", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I1_1_3", "Components" : [
+    { "Name" : "J101", "Pins" : ["5"] },
+    { "Name" : "R103B", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I1_N004", "Components" : [
+    { "Name" : "IC101", "Pins" : ["1"] },
+    { "Name" : "P101", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I1_N005", "Components" : [
+    { "Name" : "IC101", "Pins" : ["5"] },
+    { "Name" : "P101", "Pins" : ["3"] }
+    ] },
+    { "Node" : "I1_OUT", "Components" : [
+    { "Name" : "IC101", "Pins" : ["6"] },
+    { "Name" : "J102", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I1_SP", "Components" : [
+    { "Name" : "IC101", "Pins" : ["2"] },
+    { "Name" : "R103", "Pins" : ["2"] },
+    { "Name" : "R103A", "Pins" : ["2"] },
+    { "Name" : "R103B", "Pins" : ["2"] }
+    ] },
+    { "Node" : "I2_1_1", "Components" : [
+    { "Name" : "J201", "Pins" : ["3"] },
+    { "Name" : "R203", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I2_1_2", "Components" : [
+    { "Name" : "J201", "Pins" : ["4"] },
+    { "Name" : "R203A", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I2_1_3", "Components" : [
+    { "Name" : "J201", "Pins" : ["5"] },
+    { "Name" : "R203B", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I2_N004", "Components" : [
+    { "Name" : "IC201", "Pins" : ["1"] },
+    { "Name" : "P201", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I2_N005", "Components" : [
+    { "Name" : "IC201", "Pins" : ["5"] },
+    { "Name" : "P201", "Pins" : ["3"] }
+    ] },
+    { "Node" : "I2_OUT", "Components" : [
+    { "Name" : "IC201", "Pins" : ["6"] },
+    { "Name" : "J202", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I2_SP", "Components" : [
+    { "Name" : "IC201", "Pins" : ["2"] },
+    { "Name" : "R203", "Pins" : ["2"] },
+    { "Name" : "R203A", "Pins" : ["2"] },
+    { "Name" : "R203B", "Pins" : ["2"] }
+    ] },
+    { "Node" : "I3_1_1", "Components" : [
+    { "Name" : "J301", "Pins" : ["3"] },
+    { "Name" : "R303", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I3_1_2", "Components" : [
+    { "Name" : "J301", "Pins" : ["4"] },
+    { "Name" : "R303A", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I3_1_3", "Components" : [
+    { "Name" : "J301", "Pins" : ["5"] },
+    { "Name" : "R303B", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I3_N004", "Components" : [
+    { "Name" : "IC301", "Pins" : ["1"] },
+    { "Name" : "P301", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I3_N005", "Components" : [
+    { "Name" : "IC301", "Pins" : ["5"] },
+    { "Name" : "P301", "Pins" : ["3"] }
+    ] },
+    { "Node" : "I3_OUT", "Components" : [
+    { "Name" : "IC301", "Pins" : ["6"] },
+    { "Name" : "J302", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I3_SP", "Components" : [
+    { "Name" : "IC301", "Pins" : ["2"] },
+    { "Name" : "R303", "Pins" : ["2"] },
+    { "Name" : "R303A", "Pins" : ["2"] },
+    { "Name" : "R303B", "Pins" : ["2"] }
+    ] },
+    { "Node" : "I4_1_1", "Components" : [
+    { "Name" : "J401", "Pins" : ["3"] },
+    { "Name" : "R403", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I4_1_2", "Components" : [
+    { "Name" : "J401", "Pins" : ["4"] },
+    { "Name" : "R403A", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I4_1_3", "Components" : [
+    { "Name" : "J401", "Pins" : ["5"] },
+    { "Name" : "R403B", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I4_N004", "Components" : [
+    { "Name" : "IC401", "Pins" : ["1"] },
+    { "Name" : "P401", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I4_N005", "Components" : [
+    { "Name" : "IC401", "Pins" : ["5"] },
+    { "Name" : "P401", "Pins" : ["3"] }
+    ] },
+    { "Node" : "I4_OUT", "Components" : [
+    { "Name" : "IC401", "Pins" : ["6"] },
+    { "Name" : "J402", "Pins" : ["1"] }
+    ] },
+    { "Node" : "I4_SP", "Components" : [
+    { "Name" : "IC401", "Pins" : ["2"] },
+    { "Name" : "R403", "Pins" : ["2"] },
+    { "Name" : "R403A", "Pins" : ["2"] },
+    { "Name" : "R403B", "Pins" : ["2"] }
+    ] },
+    { "Node" : "V-", "Components" : [
+    { "Name" : "C104", "Pins" : ["1"] },
+    { "Name" : "C204", "Pins" : ["1"] },
+    { "Name" : "C304", "Pins" : ["1"] },
+    { "Name" : "C404", "Pins" : ["1"] },
+    { "Name" : "IC101", "Pins" : ["4"] },
+    { "Name" : "IC201", "Pins" : ["4"] },
+    { "Name" : "IC301", "Pins" : ["4"] },
+    { "Name" : "IC401", "Pins" : ["4"] },
+    { "Name" : "J500", "Pins" : ["5", "6"] },
+    { "Name" : "J501", "Pins" : ["5", "6"] }
+    ] },
+    { "Node" : "V+", "Components" : [
+    { "Name" : "C103", "Pins" : ["1"] },
+    { "Name" : "C203", "Pins" : ["1"] },
+    { "Name" : "C303", "Pins" : ["1"] },
+    { "Name" : "C403", "Pins" : ["1"] },
+    { "Name" : "IC101", "Pins" : ["7"] },
+    { "Name" : "IC201", "Pins" : ["7"] },
+    { "Name" : "IC301", "Pins" : ["7"] },
+    { "Name" : "IC401", "Pins" : ["7"] },
+    { "Name" : "J500", "Pins" : ["1", "2"] },
+    { "Name" : "J501", "Pins" : ["1", "2"] },
+    { "Name" : "P101", "Pins" : ["2"] },
+    { "Name" : "P201", "Pins" : ["2"] },
+    { "Name" : "P301", "Pins" : ["2"] },
+    { "Name" : "P401", "Pins" : ["2"] }
+    ] }
+],
+"NetColors" : [
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" }
+]
+}

@@ -1,0 +1,156 @@
+# Analog Computer -- Integrator V2, Relais Board.
+
+# Common signals.
+.COM GND
+.COM V+
+
+.PARTS
+J1, SIP5, J1
+.EQU J_GND, J1-1
+.EQU J_V+,  J1-2
+.EQU J_H,   J1-3
+.EQU J_R,   J1-4
+.EQU J_IC,  J1-5
+
+.NODES
+GND, J_GND
+V+,  J_V+
+
+# Run connection points.
+.PARTS
+J2, SIP4, J2
+.EQU J_R1, J2-1
+.EQU J_R2, J2-2
+.EQU J_R3, J2-3
+.EQU J_R4, J2-4
+
+# Initial Condition connection points.
+J3, SIP4, J3
+.EQU J_IC1, J3-1
+.EQU J_IC2, J3-2
+.EQU J_IC3, J3-3
+.EQU J_IC4, J3-4
+
+# Inputs
+J4, SIP4, J4
+.EQU J_A1, J4-1
+.EQU J_A2, J4-2
+.EQU J_A3, J4-3
+.EQU J_A4, J4-4
+
+# Definitions for semiconductor leads.
+.MAP -DDK, -1
+.MAP -DDA, -2
+.MAP -TTC, -1 # 2N4401
+.MAP -TTB, -2 # 2N4401
+.MAP -TTE, -3 # 2N4401
+
+# Resistor values.
+.EQU 1111, 2k7
+.EQU 2222, 4k7
+
+# Run/Hold switch.
+.PARTS
+S100,	Rel_TQ2_L2,	S1
+D101,	AX2_1,		1N4148
+D102,	AX2_1,		1N4148
+Q101,	TO92,		2N4401
+R101,	AX2_1N,		1111
+R102,	AX2_1N,		2222
+Q102,	TO92,		2N4401
+R103,	AX2_1N,		1111
+R104,	AX2_1N,		2222
+
+S300,	Rel_TQ2_L2,	S3
+D301,	AX2_1,		1N4148
+D302,	AX2_1,		1N4148
+Q301,	TO92,		2N4401
+R301,	AX2_1N,		1111
+R302,	AX2_1N,		2222
+Q302,	TO92,		2N4401
+R303,	AX2_1N,		1111
+R304,	AX2_1N,		2222
+
+# Run switch circuit.
+.NODES
+.NNN runsw, *
+J_R, R101-1, R301-1     # Run input
+
+D101-DDK, S100-LRP, V+
+D101-DDA, S100-LRN, Q101-TTC
+R101-2, R102-1, Q101-TTB
+R102-2, Q101-TTE, GND
+
+D301-DDK, S300-LRP, V+
+D301-DDA, S300-LRN, Q301-TTC
+R301-2, R302-1, Q301-TTB
+R302-2, Q301-TTE, GND
+
+# Hold switch crcuit.
+.NNN holdsw, *
+J_H, R103-1, R303-1     # Hold input
+
+D102-DDK, S100-LSP, V+
+D102-DDA, S100-LSN, Q102-TTC
+R103-2, R104-1, Q102-TTB
+R104-2, Q102-TTE, GND
+
+D302-DDK, S300-LSP, V+
+D302-DDA, S300-LSN, Q302-TTC
+R303-2, R304-1, Q302-TTB
+R304-2, Q302-TTE, GND
+
+# Load Initial Condition switch.
+.PARTS
+S200,	Rel_TQ2,        S2
+D201,	AX2_1,		1N4148
+Q201,	TO92,		2N4401
+R201,	AX2_1N,		1111
+R202,	AX2_1N,		2222
+
+S400,	Rel_TQ2,	S4
+D401,	AX2_1,		1N4148
+Q401,	TO92,		2N4401
+R401,	AX2_1N,		1111
+R402,	AX2_1N,		2222
+
+# Load Initial Condition switch circuit.
+.NODES
+.NNN ldicsw, *
+J_IC, R201-1, R401-1    # IC input
+
+D201-DDK, S200-LP, V+
+D201-DDA, S200-LN, Q201-TTC
+R201-2, R202-1, Q201-TTB
+R202-2, Q201-TTE, GND
+
+D401-DDK, S400-LP, V+
+D401-DDA, S400-LN, Q401-TTC
+R401-2, R402-1, Q401-TTB
+R402-2, Q401-TTE, GND
+
+# Run/Hold/IC relais contact circuit
+# Hold is simply not connected.
+.NODES
+.NNN run_hld_ldicsw, *
+J_R1, S100-NC1
+J_R2, S100-NC2
+J_R3, S300-NC1
+J_R4, S300-NC2
+
+J_IC1, S200-NO1
+J_IC2, S200-NO2
+J_IC3, S400-NO1
+J_IC4, S400-NO2
+
+J_A1, S200-C1
+J_A2, S200-C2
+J_A3, S400-C1
+J_A4, S400-C2
+
+S100-C1, S200-NC1
+S100-C2, S200-NC2
+S300-C1, S400-NC1
+S300-C2, S400-NC2
+
+# END
