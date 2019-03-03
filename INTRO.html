@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>An Educational Analogue Computer</title>
+<style>
+body {
+  counter-reset: h1counter
+}
+h1.nocount::before {
+  content: none;
+  counter-increment: none;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  counter-reset: h2counter;
+}
+h1::before {
+  content: counter(h1counter) ".\0000a0\0000a0";
+  counter-increment: h1counter;
+}
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  counter-reset: h3counter;
+}
+h2::before {
+  content: counter(h1counter) "." counter(h2counter) ".\0000a0\0000a0";
+  counter-increment: h2counter;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h3::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+  counter-increment: h3counter;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+pre {
+  font-family: "Courier New", Courier, monospace;
+}
+</style>
+</head>
+<body>
+<h1 class=nocount>An Educational Analogue Computer</h1>
+
+<h1>Introduction</h1>
+<p>
+Searching for an electronics project simple enough to be completed in a reasonably small amount of time and complex enough to be interesting, I stumbled over analogue computers. A great web site in English and German can be found at http://www.analogmuseum.org/.
+</p>
+<p>
+A design of a home-brew analogue computer for educational purposes by Dr. F. Vogel appeared to meet the criteria. I also had an old card rack laying around collecting dust and looking for a new use. It proved to be a near perfect match for the project. See the picture of the finished computer below. Well, almost finished, the function generator module F is empty.
+</p>
+<img src="pics/edac_full.JPG" alt="pics/edac_full.JPG" style="width:15cm">
+<p>
+As I had that card rack for the case, it was obvious to go for a modular design. The original is a dual board construction. This also allowed me to build the computer step by step and having the option to start over with a small part in case of failure or need for improvement.
+</p>
+<p>
+Electronically, I very much copied the original design. Exceptions were the Op-Amps and the precision resistors, due to availability restrictions. So, I used LF356 instead of LF357 and 0.1% resistors instead of 0.05%.
+</p>
+<p>
+Due to space restrictions I also left out the build-in volt meter and simply use an external multimeter, or even several of them at the same time.
+</p>
+<p>
+Whilst I happen to be a bit of a pen and paper person, designing circuits using strip boards can be tedious. Thus, I looked for some software support. VeeCAD was a simple and free solution. Later, I bought the full version of VeeCAD to enjoy its advanced features, but the first boards were done with the free version.
+</p>
+<p>
+The electronics are built on standard 100mm x 160mm strip boards. The font panels are also made of experiment board material. The 0.1in hole pattern allowed for easy cutting and accurate alignment of the numerous 2mm banana jacks.
+</p>
+<p>
+I found, that for certain experiments, the number of active elements provided by the original design were not enough. The card rack provided sufficient space for more:
+</p>
+4 Integrators<br>
+4 Adders<br>
+4 Inverters/open amplifiers<br>
+2 Multipliers<br>
+4 Potentiometers<br>
+1 Function generator<br>
+
+<h1>The Modules</h1>
+
+<h2>The Power Supply</h2>
+<img src="pics/edac_power_supply.jpg" alt="pics/edac_power_supply.jpg" style="height:13cm">
+<p>
+The power supply was the first module I built. It was simple and served as a proof-of-concept, electronically and mechanically. I wanted to see whether the prototyping board makes for reasonable front panels (it did). As I used mostly material I already had, it looks slightly different than the later modules.
+</p>
+<p>
+As this analogue computer was going to contain more active elements than the original design, I had to provide it with a more powerful DC-to-DC converter: TEN5-1223 instead of TEN3-1223, which was luckily pin-compatible.
+</p>
+<p>
+The module provides connections to the positive and negative reference voltages REF+ and REF-, the adjustable triangular oscillator TRI and an ample amount of grounding jacks.
+</p>
+<p>
+The triangular waveform oscillator can be adjusted with a ten-turn potentiometer, but I found it not necessary to provide it with a counting dial.
+</p>
+<pre>
++15V .. +15V
++15V .. +15V
+GND  .. GND
+GND  .. GND
+-15V .. -15V
+-15V .. -15V
+</pre>
+
+<h2>The Potentiometers</h2>
+<img src="pics/edac_potentiometer.jpg" alt="pics/edac_potentiometer.jpg" style="height:13cm">
+<p>
+The potentiometer module turned out to be surprisingly more difficult to build than anticipated. The reason was that the multi-turn pots and counting dials (they look cool, I love them) require accurate mechanical construction and precise alignment to turn smoothly. The dials need just the right amount of play between the case and the front panel. About the thickness of thin cardboard.
+</p>
+<p>
+Potentiometers 3 and 4 can optionally be based to external jacks B3 and B4 using the switches S3 and S4 (in up position). With S3 and S4 in their down position, potentiometers 3 and 4 are based to GND. Despite B3 and B4 being black, they are not GND. I wanted to use grey jacks for these, but I had none.
+</p>
+<p>
+As an addition to the original design, I have provided the potentiometers with op-amps. Without the op-amps, loading the voltage dividers would throw the counting dials out of calibration. Thus, defeating their use (otherwise they are quite accurate). The module can easily be configured back to the original passive design by removing the op-amps and bridging some internal connections.
+</p>
+<p>
+The decal at the bottom of the panel: 1, 2, 3, 4 show the dial assignments. I, Ox2 standing for the yellow input- and two red output jacks. S3,4 the two switches
+</p>
+
+<h2>The Summer</h2>
+<img src="pics/edac_summer_inverter.jpg" alt="pics/edac_summer_inverter.jpg" style="height:13cm">
+<p>
+The summer module contains two independent adder circuits a and b as well as two independent open amplifiers c and d which can be used as inverters. I have chosen this arrangement to distribute the active elements more evenly over the entire front panel.
+</p>
+<p>
+A connection to the summing point allows for a (within certain limits) arbitrary number of additional inputs of any scaling factor using external resistors.
+</p>
+<p>
+There are two identical summer modules in the system.
+</p>
+<p>
+The decal denotes the module type S for summer; 10 one times 10 input and 1x2 two times 1 inputs; S the summing point; Ox2 the two outputs. The open amplifier only having times 1 inputs.
+</p>
+<pre>
+   a    b    c    d        color    signal  description
+,---------------------,
+|                     |
+|  ()   ()            |    ylw/blk  10      x10 Input (I1)
+|                     |
+|  ()   ()   ()   ()  |    ylw       1      x1 Input  (I2)
+|                     |
+|  ()   ()   ()   ()  |    ylw       1      x1 Input  (I3)
+|                     |
+|  ()   ()   ()   ()  |    grn       S      Summing Point
+|                     |
+|  ()   ()   ()   ()  |    red       O      Output
+|                     |
+|  ()   ()   ()   ()  |    red       O      Output
+|                     |
+'---------------------'
+</pre>
+<p>
+The equation of an adder is:
+</p>
+<pre>
+Vout = -(10*I1 + I2 + I3 + x*S) with x depending on external resistance.
+</pre>
+<p>
+The equation of an open amplifier is:
+</p>
+<pre>
+Vout = -A * (I1 + I2 + x*S) with x depending on external resistance.
+</pre>
+<p>
+Where A is the open loop gain of the amplifier.
+To operate an open amplifier as an inverter, a feedback connection needs to be installed between one of the outputs and the summing point using a patch cable like:
+</p>
+<pre>
+  1       Input value X
+
+  S--,
+     |
+  O--'
+
+  O       Output result -X
+</pre>
+<p>
+With the equation in 2. and very high A, thus Vout/0 = 0, this results to:
+</p>
+<pre>
+  0 = -(I1 + I2 + Vout) => <u>Vout = -(I1 + I2)</u>
+</pre>
+
+<h2>The Integrator</h2>
+<img src="pics/edac_integrator.jpg" alt="pics/edac_integrator.jpg" style="height:13cm">
+<p>
+The integrator module contains four independent integrator circuits a to d.
+</p>
+<p>
+The operation switch allows setting the operation mode to either load initial conditions (IC), halt or compute (RUN).
+</p>
+<p>
+Only manual operation switching is provided by this module.
+</p>
+<p>
+A connection to the summing point allows for a (within certain limits) arbitrary number of additional inputs of arbitrary multiplication factor using external resistors. The original design did not provide for a summing point connection.
+</p>
+<p>
+The integration time is about 1s (with 4.7uF capacitor and 220kOhm resistor) for each of the four integrators. This is very slow, but seems appropriate for demonstration purposes.
+</p>
+<p>
+The decal denotes the module type In for integrator. IC the initial condition input; 10 one times 10 input; 1x2 two times 1 inputs; S the summing point and Ox2 the two outputs.
+</p>
+<pre>
+   a    b    c    d        color    signal  description
+,---------------------,
+|                     |
+|            RUN      |
+|        (&deg;) HALT     |                     Operation switch
+|            IC       |
+|                     |
+|                     |
+|  ()   ()   ()   ()  |    blu      IC      Initial Condition
+|                     |
+|  ()   ()   ()   ()  |    ylw/blk  10      x10 Input
+|                     |
+|  ()   ()   ()   ()  |    ylw       1      x1 Input
+|                     |
+|  ()   ()   ()   ()  |    ylw       1      x1 Input
+|                     |
+|  ()   ()   ()   ()  |    grn       S      Summing Point
+|                     |
+|  ()   ()   ()   ()  |    red       O      Output
+|                     |
+|  ()   ()   ()   ()  |    red       O      Output
+|                     |
+'---------------------'
+</pre>
+
+<h3>Zero Adjustment Procedure</h3>
+<p>
+To adjust the op-amp compensation trimmers for zero output follow this procedure for each individual integrator a to d:
+<ol>
+<li>Connect the respective IC input to one of the available GND jacks.</li>
+<li>Set the operation switch to the IC position.</li>
+<li>Measure the voltage between the respective integrator output and GND.</li>
+<li>Adjust the trimmer potentiometer to a zero reading.</li>
+</ol>
+</p>
+
+<h3>Integrator Testing Procedure</h3>
+<p>
+A simple way of testing the integrators is using them in a circuit calculating a circle. The circuit tests two integrators and an inverter at the same time. 
+</p>
+<pre>
+     GND           ,-----,
+      |            |1    |feedback
+      |IC          '-|   |
+,----[>-+----[>-+----(>--+--, [> Integrator
+|   1   |   1   |   1       | (> Open Amplifier/Inverter
+|       X       Y           | 
+'---------------------------'
+</pre>
+
+<h3>Integrator Leakage</h3>
+<p>
+With the circle circuit described above, it was possible to measure the total leakage, but I assume it is mostly due to capacitor leakage. The leakage causes the circle on the oscilloscope shrink in diameter with time. I measured the time during which the voltage dropped by one division or 2.50 Volt.<br>
+tdiv = 38min = 2280s (1div = 2.50V)<br>
+leakage/s = 2.50V/2280s = 0.0011V/s = 110ppm/s @ 10V full scale.
+</p>
+<img src="pics/leakage_circle.JPG" alt="pics/leakage_circle.JPG" style="width:14cm">
+<p>
+The oscilloscope (Agilent 54621A) is set to XY mode; 2.5V/div on X and Y; averaging acquisition.
+</p>
+
+<h2>A New Integrator</h2>
+
+<h2>The Multiplier</h2>
+<h3>Multiplication</h3>
+<h3>Division</h3>
+
+<h2>The Function Generator</h2>
+
+<h2>Accessories</h2>
+
+</body>
+</html>
+
+
